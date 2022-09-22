@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            background-color: #6768c0;
+        }
+        #login_container{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 350px;
+            height: 500px;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 30px 15px;
+            background-color: white;
+            line-height: 30px;
+        }
+        h1{
+            font-size: 40px;
+        }
+
+        #login_container>input{
+            border: 0px;
+            border-bottom: 3px solid gray;
+            line-height: 20px;
+            height: 60px;
+            width: 80%;
+            margin: auto;
+            font-size: 20px;
+        }
+        #login_container>button{
+            width: 300px;
+            margin: auto;
+            font-size: 20px;
+            background-color: #6768c0;
+            color: white;
+            border: 0px ;
+            padding: 20px 60px;
+        }
+        div>p>a{
+            color:#6768c0 ;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login_container">
+        <h1>Login</h1>
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="password" placeholder="Password">
+        <button onclick="datacheck()">Login</button>
+        <div id="lower">
+            <p>Forgot <a href="">Password</a>?</p>
+            <p>Don't have an account? <a href="">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function datacheck()
+    {
+        email=document.querySelector("#email").value
+        password=document.querySelector("#password").value
+        
+        localStorage.setItem("user_email",email)
+        localStorage.setItem("user_password",password)
+    }
+    
+</script>
