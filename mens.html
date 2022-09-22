@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: auto;
+            padding: 0px 20px;
+            width: 700px;
+        }
+
+        img {
+
+            height: 300px;
+            margin: auto;
+            display: flex;
+        }
+        #parent>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 6px;
+        }
+        #parent>div>div {
+            margin: auto;
+            line-height: 8px;
+            padding: 0px 20px;
+
+        }
+
+        .green {
+            color: rgb(8, 198, 8);
+            font-weight: bold;
+        }
+
+        p+p {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        p+p>span:first-child {
+            text-decoration: line-through;
+            color: grey;
+            font-weight: 100;
+        }
+
+        h3+p {
+            color: rgb(120, 120, 120);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div>
+            <div>
+                <img src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPPAUSE-BLACK-PAUS57747861200F37/1562877340930_1..jpg?imwidth=320&impolicy=hq"
+                    alt="" srcset="">
+            </div>
+            <div>
+                <h3>PAUSE</h3>
+                <p>Men Cotton Long Sleeves Shrug</p>
+                <p>₹ 359 <span>₹ 1499 </span> <span class="green"> -76%</span></p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPJUBINATION-SJERS295568BD3913AD/1562955990957_0..jpg?imwidth=320&impolicy=hq"
+                    alt="" srcset="">
+            </div>
+            <div>
+                <h3>JUBINATION</h3>
+                <p>Men Wool Sleevless Sweater Pack Of 1</p>
+                <p>₹ 799 <span>₹ 1499 </span> <span class="green"> -47%</span></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
